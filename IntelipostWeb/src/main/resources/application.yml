@@ -1,0 +1,20 @@
+intelipost:
+  web:
+    api:
+      host: http://localhost:8090/Intelipost/api
+      login: /v1/users/login
+      user: /v1/users
+    basic:
+      authentication:
+        user: Inteli
+        pass: Post
+
+info:
+  build:
+    version: ${project.version}
+    name: ${spring.application.name}
+    
+server:
+  context-path: /IntelipostWeb
+  port: 9090   
+  
