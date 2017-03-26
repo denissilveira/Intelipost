@@ -1,0 +1,35 @@
+spring:
+  datasource: 
+    url: jdbc:mysql://localhost:3306/intelipost?autoReconnect=true&useSSL=false
+    username: root
+    password: D3scha1n
+    test-while-idle: true
+    validationQuery: SELECT 1 
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  redis:
+    host: localhost
+    port: 6379
+    
+server:
+  context-path: /Intelipost
+  port: 8090  
+    
+swagger:
+  groupName: Intelipost
+  pathRegex: /v1/*.*
+  title: Intelipost API
+  version: 1.0.0
+  
+intelipost:
+  web:
+    api:
+      host: localhost:8090/Intelipost
+      login: v1/users/login
+      user: v1/users
